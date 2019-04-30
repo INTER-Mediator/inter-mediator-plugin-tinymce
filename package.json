@@ -1,6 +1,6 @@
 {
   "name": "inter-mediator-plugin-tinymce",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "INTER-Mediator plug-in to use the tinymce.",
   "main": "index.js",
   "scripts": {
