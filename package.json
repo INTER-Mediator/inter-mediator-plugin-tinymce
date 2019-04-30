@@ -1,0 +1,26 @@
+{
+  "name": "inter-mediator-plugin-tinymce",
+  "version": "1.0.0",
+  "description": "INTER-Mediator plug-in to use the tinymce.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/INTER-Mediator/inter-mediator-plugin-tinymce.git"
+  },
+  "keywords": [
+    "INTER-Mediator",
+    "tinymce"
+  ],
+  "dependencies": {
+    "tinymce": "*"
+  },
+  "author": "Masayuki Nii",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/INTER-Mediator/inter-mediator-plugin-tinymce/issues"
+  },
+  "homepage": "https://github.com/INTER-Mediator/inter-mediator-plugin-tinymce#readme"
+}
