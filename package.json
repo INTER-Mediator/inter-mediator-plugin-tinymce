@@ -1,6 +1,6 @@
 {
   "name": "inter-mediator-plugin-tinymce",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "INTER-Mediator plug-in to use the tinymce.",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
     "tinymce"
   ],
   "dependencies": {
-    "tinymce": "*"
+    "tinymce": ">5.3.0"
   },
   "author": "Masayuki Nii",
   "license": "MIT",
