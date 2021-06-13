@@ -72,10 +72,10 @@ IMParts_Catalog['tinymce'] = {
           };
         })());
         ed.on('keydown', function (ev) {
-          IMLibUI.keyDown(ev);
+          //IMLibUI.keyDown(ev);
         });
         ed.on('keyup', function (ev) {
-          IMLibUI.keyUp(ev);
+          //IMLibUI.keyUp(ev);
         });
       };
     } else {
