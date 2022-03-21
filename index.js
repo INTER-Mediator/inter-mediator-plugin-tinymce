@@ -16,18 +16,18 @@ var tinymceOption = {
     'searchreplace wordcount visualblocks visualchars code fullscreen insertdatetime media nonbreaking',
     'save table directionality emoticons template paste'],
   // content_css: 'css/content.css',
-  toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify ' +
-    '| bullist numlist outdent indent | link image | print preview media fullpage ' +
-    '| forecolor backcolor emoticons',
-  style_formats: [
-    {title: 'Bold text', inline: 'b'},
-    {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
-    {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
-    {title: 'Example 1', inline: 'span', classes: 'example1'},
-    {title: 'Example 2', inline: 'span', classes: 'example2'},
-    {title: 'Table styles'},
-    {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
-  ]
+  // toolbar: 'insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify ' +
+  //   '| bullist numlist outdent indent | link image | print preview media fullpage ' +
+  //   '| forecolor backcolor emoticons',
+  // style_formats: [
+  //   {title: 'Bold text', inline: 'b'},
+  //   {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
+  //   {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
+  //   {title: 'Example 1', inline: 'span', classes: 'example1'},
+  //   {title: 'Example 2', inline: 'span', classes: 'example2'},
+  //   {title: 'Table styles'},
+  //   {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
+  // ]
 };
 
 IMParts_Catalog['tinymce'] = {
@@ -59,8 +59,6 @@ IMParts_Catalog['tinymce'] = {
     if (!tinymceOption) {
       tinymceOption = {};
     }
-    tinymceOption.mode = 'specific_textareas';
-    tinymceOption.elements = this.ids.join(',');
     if (update) {
       tinymceOption.setup = function (ed) {
         ed.on('change', (function () {
@@ -81,11 +79,12 @@ IMParts_Catalog['tinymce'] = {
     } else {
       tinymceOption.setup = null;
     }
-    tinyMCE.init(tinymceOption);
 
     for (let i = 0; i < this.ids.length; i++) {
       let targetNode = document.getElementById(this.ids[i]);
       let targetId = this.ids[i];
+      tinymceOption.selector = '#' + targetId;
+      tinyMCE.init(tinymceOption);
       if (targetNode) {
         targetNode._im_getValue = (function () {
           let thisId = targetId;
