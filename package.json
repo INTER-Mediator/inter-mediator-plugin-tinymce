@@ -15,10 +15,10 @@
     "tinymce"
   ],
   "devDependencies": {
-    "jest": ">=26.6.3"
+    "jest": "^29.3.1"
   },
   "dependencies": {
-    "tinymce": ">5.3.0"
+    "tinymce": "^6.3.1"
   },
   "author": "Masayuki Nii",
   "license": "MIT",
