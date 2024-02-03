@@ -9,7 +9,7 @@ eval(fs.readFileSync('./index.js').toString());
 
 test('Object exists, and has fundamental methods.', () => {
   expect(typeof IMParts_Catalog.tinymce).toBe('object')
-  expect(typeof IMParts_Catalog.tinymce.instanciate).toBe('function')
+  expect(typeof IMParts_Catalog.tinymce.instantiate).toBe('function')
   expect(typeof IMParts_Catalog.tinymce.finish).toBe('function')
   }
 )

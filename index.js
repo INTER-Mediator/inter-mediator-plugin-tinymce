@@ -31,7 +31,7 @@ var tinymceOption = {
 };
 
 IMParts_Catalog['tinymce'] = {
-  instanciate: function (parentNode) {
+  instantiate: function (parentNode) {
     let newId = parentNode.getAttribute('id') + '-e';
     this.ids.push(newId);
     let newNode = document.createElement('TEXTAREA');
